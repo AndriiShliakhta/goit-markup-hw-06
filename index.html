@@ -357,7 +357,39 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button data-modal-close>
+            <h2 class="section-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form name="autocall-date">
+                <label class="form-label">Имя
+                    <!-- <span class="input-icon-cont"> -->
+                        <svg class="input-icon">
+                            <use href="./images/icons.svg#icon-person-black"></use>
+                        </svg>
+                    <!-- </span> -->
+                    <input type="text" name="name" class="form-input">
+                </label>
+                <label class="form-label">Телефон
+                    <svg class="input-icon">
+                        <use href="./images/icons.svg#icon-phone-black"></use>
+                    </svg>
+                    <input type="tel" name="tel" class="form-input">
+                </label>
+                <label class="form-label">Почта
+                    <svg class="input-icon">
+                        <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
+                    <input type="email" name="email" class="form-input">
+                </label>
+                <label class="form-label">Комментарий
+                    <textarea name="comment" class="form-input form-comment" placeholder="Введите текст"></textarea>
+                </label>
+                <label class="form-label checkbox-label">
+                    <input type="checkbox" name="contract-accept"  class="form-checkbox">
+                    <span class="checkbox-icon"></span>
+                    Соглашаюсь с рассылкой и принимаю &nbsp<a href="">Условия договора</a>
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+            <button data-modal-close class="modal-close">
                 <img src="./images/close.svg" alt="Закрыть">
             </button>
             

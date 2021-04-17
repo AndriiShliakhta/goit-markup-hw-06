@@ -353,18 +353,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="subscribe-cont">
+                <label for="subscribe-email" class="subscribe-label">Подпишитесь на рассылку</label>
+                    <input  id="subscribe-email" type="email" name="subscribe-form" class="subscribe-form" placeholder="E-mail">
+                    <button type="submit" class="subscribe-button">Подписаться
+                        <svg class="subscribe-icon-send">
+                            <use href="./images/icons.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+            </div>
         </div>
     </footer>
+
+    <!-- Бэкдроп и модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <h2 class="section-title">Оставьте свои данные, мы вам перезвоним</h2>
             <form name="autocall-date">
                 <label class="form-label">Имя
-                    <!-- <span class="input-icon-cont"> -->
                         <svg class="input-icon">
                             <use href="./images/icons.svg#icon-person-black"></use>
                         </svg>
-                    <!-- </span> -->
                     <input type="text" name="name" class="form-input">
                 </label>
                 <label class="form-label">Телефон
@@ -385,12 +394,15 @@
                 <label class="form-label checkbox-label">
                     <input type="checkbox" name="contract-accept"  class="form-checkbox">
                     <span class="checkbox-icon"></span>
-                    Соглашаюсь с рассылкой и принимаю &nbsp<a href="">Условия договора</a>
+                    Соглашаюсь с рассылкой и принимаю&nbsp;
+                    <a href="">Условия договора</a>
                 </label>
-                <button type="submit">Отправить</button>
+                <button type="submit" class="modal-button">Отправить</button>
             </form>
             <button data-modal-close class="modal-close">
-                <img src="./images/close.svg" alt="Закрыть">
+                <svg class="close-icon">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
             </button>
             
         </div>

@@ -395,6 +395,7 @@ ul {
 }
 .footer > .container {
   display: flex;
+  justify-content: space-between;
 }
 .footer .logo {
   color: var(--white-color);
@@ -446,6 +447,50 @@ ul {
   height: 20px;
   fill: var(--white-color);
 }
+.subscribe-cont {
+  margin-left: 93px;
+}
+.subscribe-label {
+  display: block;
+  color: var(--white-color);
+  font-size: 14px;
+  line-height: 1.17;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.subscribe-form {
+  display: inline-block;
+  padding: 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.subscribe-form:focus {
+  color: var(--white-color);
+}
+.subscribe-button {
+  display: inline-block;
+  line-height: 1.875;
+  padding: 10px 28px;
+  margin-left: 12px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white-color);
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.subscribe-icon-send {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
 
 /* Модальное окно */
 .backdrop {
@@ -464,7 +509,6 @@ ul {
 }
 .modal {
   width: 528px;
-  height: 581px;
   background-color: #ffffff;
   position: relative;
   top: 50%;
@@ -484,24 +528,14 @@ ul {
   position: relative;
   margin-bottom: 10px;
 }
-.form-label:focus-within .input-icon {
-  fill: var(--accent-color);
-}
+
 .form-input {
   width: 100%;
   padding: 11px 41px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: pointer;
-}
-
-.form-input:focus {
-  outline-color: var(--accent-color);
-}
-.form-input.form-comment {
-  height: 120px;
-  padding-left: 16px;
-  resize: none;
+  transition: outline-color var(--transition-function);
 }
 .input-icon {
   width: 18px;
@@ -510,11 +544,27 @@ ul {
   z-index: 20;
   top: 35px;
   left: 12px;
+  transition: fill var(--transition-function);
 }
+.form-input:focus {
+  outline-color: var(--accent-color);
+}
+.form-label:focus-within .input-icon {
+  fill: var(--accent-color);
+}
+.form-input.form-comment {
+  height: 120px;
+  padding-left: 16px;
+  resize: none;
+}
+
 .checkbox-label {
   display: flex;
   align-items: center;
-  margin-left: 14px;
+  font-size: 14px;
+  line-height: 1.71;
+  display: block;
+  margin: 20px 0 30px 14px;
 }
 .form-checkbox {
   -webkit-appearance: none;
@@ -530,6 +580,9 @@ ul {
   border: 2px solid var(--section-title-color);
   border-radius: 2px;
   margin-right: 7px;
+  transition: border-color var(--transition-function),
+    background-color var(--transition-function),
+    background-image var(--transition-function);
 }
 .checkbox-icon a {
   color: var(--accent-color);
@@ -540,6 +593,22 @@ ul {
   background-image: url('../images/icon-check.svg');
   background-size: contain;
   background-origin: border-box;
+}
+.modal-button {
+  display: block;
+  line-height: 1.875;
+  padding: 10px 55px;
+  width: 200px;
+  margin: auto;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white-color);
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .modal .modal-close {
@@ -557,6 +626,14 @@ ul {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.close-icon {
+  width: 18px;
+  height: 18px;
+  transition: fill var(--transition-function);
+}
+.modal-close:hover .close-icon {
+  fill: var(--accent-color);
 }
 
 /* Страница портфолио */
